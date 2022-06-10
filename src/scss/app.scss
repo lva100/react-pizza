@@ -34,6 +34,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title_404_error {
+    text-align: center;
+    color: #1c4561;
+  }
+
+  &__describe_404_error {
+    text-align: center;
+    padding-top: 20px;
+    color: #1d3760;
+    margin-bottom: 100px;
   }
 }
 
