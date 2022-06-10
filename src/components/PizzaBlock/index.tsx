@@ -28,6 +28,7 @@ export const PizzaBlock: React.FC<PizzaProps> = ({
 }) => {
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
+  const [addCart, setAddCart] = React.useState(0);
 
   return (
     <div className="pizza-block">
@@ -63,7 +64,12 @@ export const PizzaBlock: React.FC<PizzaProps> = ({
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">от {price} ₽</div>
-        <div className="button button--outline button--add">
+        <button
+          onClick={() => {
+            setAddCart(addCart + 1);
+          }}
+          className="button button--outline button--add"
+        >
           <svg
             width="12"
             height="12"
@@ -77,8 +83,8 @@ export const PizzaBlock: React.FC<PizzaProps> = ({
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
-        </div>
+          <i>{addCart}</i>
+        </button>
       </div>
     </div>
   );
